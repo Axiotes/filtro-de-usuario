@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    height: 100vh;
+
+    &__left-container{
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &__top-div{
+            flex-grow: 1;
+        }
+
+        &__main-div{
+            height: 80%;
+        }
+    }
+
+    &__right-div{
+        width: 30%;
+        max-width: 100vh;
+    }
+}
