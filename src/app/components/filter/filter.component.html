@@ -1,0 +1,32 @@
+<div class="filter">
+    <form class="filter__form">
+        <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Ex: João">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Data de cadastro</mat-label>
+
+            <mat-date-range-input [rangePicker]="picker">
+              <input matStartDate placeholder="Data de início">
+              <input matEndDate placeholder="Data de fim">
+            </mat-date-range-input>
+            
+            <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Status</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let selects of status" [value]="selects.value">
+                    {{ selects.viewValue }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-flat-button color="primary">Primary</button>
+    </form>
+</div>
