@@ -6,11 +6,13 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { AngularMaterialModule } from "../angular-material/angular-material.module";
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { FilterComponent } from './filter/filter.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
     declarations: [
     UserDetailsComponent,
-    FilterComponent
+    FilterComponent,
+    TableComponent
   ],
     imports: [
         AngularMaterialModule,
@@ -20,6 +22,7 @@ import { FilterComponent } from './filter/filter.component';
     exports: [
       UserDetailsComponent,
       FilterComponent,
+      TableComponent,
       CommonModule,
       FormsModule
     ],
