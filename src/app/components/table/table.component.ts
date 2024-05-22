@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 import { IUser } from '../../interfaces/user.interface';
 import { UsersList } from '../../data/uses-list';
 
@@ -10,8 +10,9 @@ import { UsersList } from '../../data/uses-list';
 export class TableComponent {
   userList: IUser[] = UsersList;
   displayedColumns: string[] = ['nome', 'dataCadastro', 'status'];
+  @Output() indexOfSelected = new EventEmitter<number>();
 
-  selectUser(user: []) {
-    console.log("Usuário:", user);
+  selectUser(user: number) {
+    this.indexOfSelected.emit(user);
   }
 }

@@ -4,10 +4,10 @@
             <app-filter></app-filter>
         </div>
         <div class="container__left-container__main-div">
-            <app-table></app-table>
+            <app-table (indexOfSelected)="receiveIndexUser($event)"></app-table>
         </div>
     </div>
     <div class="container__right-div">
-        <app-user-details></app-user-details>
+        <app-user-details [user]="userSelected"></app-user-details>
     </div>
 </div>

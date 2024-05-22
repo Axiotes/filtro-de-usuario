@@ -5,4 +5,8 @@
     &__user-list{
         cursor: pointer;
     }
+
+    &__selected{
+      background-color: #b8b8b8;
+    }
 }
