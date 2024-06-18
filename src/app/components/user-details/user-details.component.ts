@@ -11,7 +11,7 @@ export class UserDetailsComponent {
   public statusUser: string = "";
 
   public checkStatus(){
-    if (this.user.ativo == true){
+    if (this.user.ativo){
       return this.statusUser = "Ativo";
     } else {
       return this.statusUser = "Inativo";
