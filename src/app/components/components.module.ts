@@ -7,7 +7,7 @@ import { AngularMaterialModule } from "../angular-material/angular-material.modu
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { FilterComponent } from './filter/filter.component';
 import { TableComponent } from './table/table.component';
-import {PipesModule} from "../pipes/pipes.module";
+import { PipesModule } from "../pipes/pipes.module";
 
 @NgModule({
     declarations: [
