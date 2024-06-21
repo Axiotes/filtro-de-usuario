@@ -8,13 +8,4 @@ import {IUser} from "../../interfaces/user.interface";
 })
 export class UserDetailsComponent {
   @Input({required: true}) user: IUser = { } as IUser;
-  public statusUser: string = "";
-
-  public checkStatus(){
-    if (this.user.ativo){
-      return this.statusUser = "Ativo";
-    } else {
-      return this.statusUser = "Inativo";
-    }
-  }
 }
