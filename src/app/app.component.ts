@@ -8,6 +8,7 @@ import {UsersList} from "./data/uses-list";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  userList: IUser[] = []
   userSelected: IUser = {} as IUser;
   showUserDetails: boolean = false;
 
