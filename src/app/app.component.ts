@@ -8,9 +8,11 @@ import {UsersList} from "./data/uses-list";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  userSelected: IUser = UsersList[0];
+  userSelected: IUser = {} as IUser;
+  showUserDetails: boolean = false;
 
   public receiveIndexUser(index: number){
     this.userSelected = UsersList[index];
+    this.showUserDetails = true;
   }
 }
