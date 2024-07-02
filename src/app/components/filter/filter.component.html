@@ -20,13 +20,13 @@
 
         <mat-form-field>
             <mat-label>Status</mat-label>
-            <mat-select [(ngModel)]="filterOptions.status">
+            <mat-select name="status" [(ngModel)]="filterOptions.status">
                 <mat-option *ngFor="let selects of statusOptions" [value]="selects.viewValue">
                     {{ selects.viewValue }}
                 </mat-option>
             </mat-select>
         </mat-form-field>
 
-        <button mat-flat-button color="primary" (click)="filter">Filtrar</button>
+        <button mat-flat-button color="primary" (click)="filter()">Filtrar</button>
     </form>
 </div>
