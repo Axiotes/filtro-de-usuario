@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {IUser} from "./interfaces/user.interface";
-import {UsersList} from "./data/uses-list";
+import { IUser } from "./interfaces/user.interface";
+import { UsersList } from "./data/uses-list";
+import { FilterOptions } from './interfaces/filter-options.interface';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,9 @@ export class AppComponent {
   public receiveIndexUser(index: number){
     this.userSelected = UsersList[index];
     this.showUserDetails = true;
+  }
+
+  public receiveFilter(filterOptions: FilterOptions){
+    console.log(filterOptions);
   }
 }
