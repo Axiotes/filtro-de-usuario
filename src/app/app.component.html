@@ -4,7 +4,7 @@
             <app-filter (onFilterEmit)="receiveFilter($event)"></app-filter>
         </div>
         <div class="container__left-container__main-div">
-            <app-table (indexOfSelected)="receiveIndexUser($event)" [userList]="userList"></app-table>
+            <app-table (indexOfSelected)="receiveIndexUser($event)" [userList]="userListFiltred"></app-table>
         </div>
     </div>
     <div class="container__right-div">
